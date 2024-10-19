@@ -1,0 +1,111 @@
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://marketplace.canva.com/EAEthkBVLfQ/1/0/1600w/canva-blush-wave-desktop-wallpaper-drvq3zaYl2E.jpg');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.container {
+    text-align: center;
+}
+
+#stopwatch {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.flip-clock {
+    font-size: 48px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    margin-bottom: 20px;
+    color: #333;
+    animation: flip-clock 1s infinite;
+}
+
+@keyframes flip-clock {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0deg); }
+}
+
+#progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+#progress-bar {
+    height: 5px;
+    background-color: #007bff;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+/* Button styling */
+.controls button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#lapTimes {
+    margin-top: 20px;
+}
+
+#lapList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lap {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+    color: #495057;
+}
+
+/* Dark mode and other themes */
+.dark-mode {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.dark-mode #stopwatch {
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #progress-bar {
+    background-color: #00bfff;
+}
